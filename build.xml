@@ -59,5 +59,4 @@
     <test  todir="testresults" outfile="result.xml" name="TestValidator.Test" />
 	</junit>
 	</target>
-
 </project>
