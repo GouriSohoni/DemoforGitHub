@@ -47,21 +47,5 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-  	<target name="pack" depends="build">
-  			 <jar destfile = "dist/TestValidator.jar" includes="build/classes/Validator.class"/> 
-  	  		
-  	     </target>
- 	<target name="test" depends="pack">
-    <mkdir dir="testresults" />
-    <junit printsummary="yes">
-    <classpath>
-        <pathelement location="C:\Users\Gouri\Downloads\Jenkins Related\junit-4.13.jar"/>
-    	<pathelement location="C:\Users\Gouri\Downloads\Jenkins Related\hamcrest-core-2.1.jar"/>
-        <pathelement location="build/classes"/>
-    </classpath>
-    	
-    <formatter type="xml"/>
-    <test  todir="testresults" outfile="result.xml" name="TestValidator.test" />
-	</junit>
-	</target>
+  
 </project>
