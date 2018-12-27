@@ -6,7 +6,7 @@ class TestValidator {
 	@Test
 	void test() {
 		 Boolean actual, expected=true;
-		    MyClass val = new MyClass();
+		    Validator val = new Validator();
 		    actual = val.Validate("Gouri", "Sohoni");
 		    assertEquals(expected,actual);
 	}

@@ -47,7 +47,11 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
- 	<target name="test" depends="build">
+  	<target name="pack" depends="build">
+  			 <jar destfile = "dist/TestValidator.jar" includes="build/classes/Validator.class"/> 
+  	  		
+  	     </target>
+ 	<target name="test" depends="pack">
     <mkdir dir="testresults" />
     <junit printsummary="yes">
     <classpath>
@@ -57,7 +61,7 @@
     </classpath>
     	
     <formatter type="xml"/>
-    <test  todir="testresults" outfile="result.xml" name="TestValidator.Test" />
+    <test  todir="testresults" outfile="result.xml" name="TestValidator.test" />
 	</junit>
 	</target>
 </project>
