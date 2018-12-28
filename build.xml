@@ -49,6 +49,10 @@
     </target>
       	<target name="junit" depends="build">
       	    <junit printsummary="yes" haltonfailure="no">
+      	    <classpath>
+	    		    <pathelement location="C:\Users\Gouri\Downloads\Jenkins Related\junit-jupiter-api-5.0.0.jar"/>
+	    			<pathelement location="C:\Users\Gouri\Downloads\Jenkins Related\hamcrest-core-2.1.jar"/>
+      	    </classpath>
       		<test name="Validator.test" 
       			haltonfailure="no" todir="${report.dir}">
       			<formatter type="plain" />
