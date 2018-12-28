@@ -1,3 +1,4 @@
+package tests;
 
 public class Validator {
 	public Boolean Validate(String name, String Pwd)
