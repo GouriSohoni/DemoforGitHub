@@ -47,5 +47,16 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+      	<target name="junit" depends="build">
+      	    <junit printsummary="yes" haltonfailure="no">
+      		<test name="Validator.test" 
+      			haltonfailure="no" todir="${report.dir}">
+      			<formatter type="plain" />
+      			<formatter type="xml" />
+      		</test>
+      			
+      	  </junit>
+      	</target>
+
   
 </project>
